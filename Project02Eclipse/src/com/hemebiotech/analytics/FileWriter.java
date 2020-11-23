@@ -1,11 +1,8 @@
 package com.hemebiotech.analytics;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Map;
-import java.util.TreeMap;
 
-public class OutputFileWriter {
+public class FileWriter {
 
     /**
      * Write a Map into an output File with sorted elements by natural order (alphabetical)
