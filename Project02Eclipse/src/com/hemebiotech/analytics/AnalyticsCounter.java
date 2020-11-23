@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
 public class AnalyticsCounter {
 
 	/**
@@ -17,15 +16,9 @@ public class AnalyticsCounter {
 	 *  as value : number of occurs in the List of the string key
 	 */
 
-	public static Map<String,Long> CountStringOccurences(List<String> listStrings)
+	public static Map<String,Integer> CountStringOccurences(List<String> listStrings)
 	{
-		Map<String,Long> mapResult = new HashMap<>();
-
-		if (listStrings!=null)
-		{
-			//browse the list of strings, grouping by string and counting the number of occurrences in the list
-			mapResult = listStrings.stream().collect(Collectors.groupingBy(str -> str, Collectors.counting()));
-		}
-		 return  mapResult;
+		//TODO : IMPLEMENT counter of List of strings into a Map
+		return 	null;
 	}
 }
