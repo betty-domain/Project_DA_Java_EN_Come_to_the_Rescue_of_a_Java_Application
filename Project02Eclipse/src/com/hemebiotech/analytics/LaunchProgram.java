@@ -12,7 +12,7 @@ public class LaunchProgram {
 
             List<String> symptomsList = symptomReader.GetSymptoms();
 
-            Map<String, Integer> symptomsMap = AnalyticsCounter.CountStringOccurences(symptomsList);
+            Map<String, Long> symptomsMap = AnalyticsCounter.CountStringOccurences(symptomsList);
 
             OutputFileWriter.WriteInFile(symptomsMap);
         }
