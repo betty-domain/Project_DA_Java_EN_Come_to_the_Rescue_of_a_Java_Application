@@ -32,7 +32,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				String line = reader.readLine();
 				
 				while (line != null) {
-					result.add(line);
+					result.add(line.toLowerCase());
 					line = reader.readLine();
 				}
 				reader.close();
