@@ -1,8 +1,5 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -17,7 +14,7 @@ public class AnalyticsCounter {
 	 *  as value : number of occurs in the List of the string key
 	 */
 
-	public static Map<String,Long> CountStringOccurences(List<String> listStrings)
+	public Map<String,Long> countStringOccurences(List<String> listStrings)
 	{
 		Map<String,Long> mapResult = new HashMap<>();
 

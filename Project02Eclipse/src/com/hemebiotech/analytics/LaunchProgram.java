@@ -5,20 +5,18 @@ import java.util.Map;
 
 public class LaunchProgram {
 
-    public static void main(String args[]) throws Exception {
+    public static void main()  {
 
-        try {
-            ReadSymptomDataFromFile symptomReader = new ReadSymptomDataFromFile("../Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt");
 
-            List<String> symptomsList = symptomReader.GetSymptoms();
+        ReadSymptomDataFromFile symptomReader = new ReadSymptomDataFromFile("../Project_DA_Java_EN_Come_to_the_Rescue_of_a_Java_Application/Project02Eclipse/symptoms.txt");
 
-            Map<String, Long> symptomsMap = AnalyticsCounter.CountStringOccurences(symptomsList);
+        List<String> symptomsList = symptomReader.getSymptoms();
 
-            OutputFileWriter.WriteInFile(symptomsMap);
-        }
-        catch (Exception exception)
-        {
-            System.out.println("An error occurs, see details below : " + exception.getMessage());
-        }
+        AnalyticsCounter analyticsCounter = new AnalyticsCounter();
+
+        Map<String, Long> symptomsMap = analyticsCounter.countStringOccurences(symptomsList);
+
+        OutputFileWriter.writeInFile(symptomsMap);
+
     }
 }
